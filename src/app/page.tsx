@@ -20,7 +20,7 @@ export default function Home() {
 
         We live in a time where the world is being reshaped by technology, yet my continent is still suffering from fundamental gaps in education and healthcare. I know many people who cannot go to school because they either cannot afford it or struggle to understand the material. Our languages are excluded from education. People die because they lack access to basic healthcare.
 
-        This has to change. I want to use my knowledge to be part of the solution. Right now, my focus is on education. How can we leverage technology to make education truly accessible? It's time to act.
+        This has to change. I want to use my knowledge to be part of the solution. Right now, my focus is on education. How can we leverage technology to make education truly accessible? It&apos;s time to act.
 
 
         </p>
