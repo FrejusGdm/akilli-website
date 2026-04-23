@@ -1,156 +1,161 @@
-import Link from "next/link";
-import { ThemeToggle } from "@/components/theme-toggle";
+import "./manifesto.css";
+
+import Image from "next/image";
+import { ColorModeControl } from "@/components/color-mode-control";
+import { EdgeTutorIllustration } from "@/components/edge-tutor-illustration";
+import { ManifestoStyleToggle } from "@/components/manifesto-style-toggle";
+
+const diagramPrint = `            THE KID · speaks, asks, learns
+                    │
+                    ▼
+            ┌── EDGE TUTOR ────────┐
+            │  on-device · offline │
+            ├ Model ─┬  Hardware ─┤
+            │<3B SLM│ <$50 device │
+            ├────── her language ──┤
+            │ no Wi-Fi · no server │
+            │  no permission needed│
+            └──────────────────────┘`;
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-gray-900 dark:text-white">
-      <div className="absolute top-8 right-8">
-        <ThemeToggle />
-      </div>
-      
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-2xl text-center sm:text-left">
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Project AKILLI</h1>
-        
-        <p className="text-lg text-gray-700 dark:text-gray-300">
-        <span className="font-bold">Vision:</span>  Using Tech to make Education and Healthcare more accessible in Africa.
+    <div className="manifesto__shell">
+      <aside className="manifesto__rail" aria-hidden="true">
+        letter
+      </aside>
+    <article className="manifesto">
+      <p className="manifesto__masthead">
+        <strong>AI-Native University</strong>
+      </p>
+
+      <h1 className="manifesto__title">
+        {/* Education is the shortest path to leadership. */}
+        {/* The best teacher in the world should fit in every pocket. */}
+        A <strong>university</strong> that comes to you.
+      </h1>
+      <div className="manifesto__rule" aria-hidden="true" />
+
+      <p className="manifesto__dateline">
+        Hanover, NH · April 2026 · Josué Godeme
+      </p>
+
+      <p className="manifesto__lead">
+        The right goal is not one famous teacher broadcast to every zip
+        code. It is education that fits each student: their pace, their
+        language, the time they can give. That is{" "}
+        <strong>personalized education</strong>, and for most of the world it
+        has been out of reach.{" "}
+        <strong>Small language models (SLMs)</strong> and{" "}
+        <strong>cheap devices</strong> are strong enough to change that. For
+        the first time, this kind of <strong>tutoring</strong> can sit in a
+        pocket. That is the bet.
+      </p>
+
+      <figure className="manifesto__hero">
+        <div className="manifesto__heroFrame">
+          <Image
+            src="/hero-editorial-garden.png"
+            alt="Adult and child at a table outdoors, learning together with a small computer."
+            fill
+            className="manifesto__heroImg"
+            sizes="(max-width: 768px) 100vw, min(100%, 60rem)"
+            loading="lazy"
+          />
+        </div>
+      </figure>
+
+      <section className="manifesto__section" aria-labelledby="kicker-from">
+        <h2 id="kicker-from" className="manifesto__kicker">
+          Where I’m writing from
+        </h2>
+        <p>
+          I came up in Benin, I study at Dartmouth, and I will go to
+          Tsinghua. I ranked first among about 80,000 students on my
+          country’s national exam. Every room I have walked into since
+          then has been paid for by a scholarship, which is another way to
+          say that it was paid for by the belief that education travels.{" "}
+          <strong>Education is the thread.</strong>
         </p>
-        
-        <p className="text-md text-gray-600 dark:text-gray-400">
-        I came to the U.S. two years ago to study at Dartmouth College, but I grew up in Benin and spent my entire life in its education system. I&apos;ve experienced its failures firsthand. Access to education is limited—half of my country&apos;s population is illiterate, and this reality is common across many African nations. We must change that.
+      </section>
 
-        We live in a time where the world is being reshaped by technology, yet my continent is still suffering from fundamental gaps in education and healthcare. I know many people who cannot go to school because they either cannot afford it or struggle to understand the material. Our languages are excluded from education. People die because they lack access to basic healthcare.
-
-        This has to change. I want to use my knowledge to be part of the solution. Right now, my focus is on education. How can we leverage technology to make education truly accessible? It&apos;s time to act.
-
-
+      <section className="manifesto__section" aria-labelledby="kicker-building">
+        <h2 id="kicker-building" className="manifesto__kicker">
+          What I’m building
+        </h2>
+        <p>
+          I am building an <strong>AI-native university</strong>. It is not
+          an app. It is not a course. It is not a platform dressed up in{" "}
+          <strong>university</strong> clothes. It is a re-architecting of what
+          school means when the best tutor in the world fits on a{" "}
+          <strong>device</strong> that costs less than a textbook.
         </p>
-        
-        <h2 className="text-2xl font-semibold mt-8">Changelog</h2>
-        <ul className="list-disc list-inside text-md text-gray-600 dark:text-gray-400">
-          <li>2025-02-17: Initial website launch 🚀</li>
-          {/* <li>2025-02-20: Defined project goals</li>
-          <li>2025-03-01: Started partnerships & collaborations</li> */}
-        </ul>
-        
-        <Link
-          className="mt-6 inline-block px-6 py-3 text-sm font-semibold text-white bg-black rounded-lg dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-300"
-          href="https://josue.godeme.com"
-          target="_blank"
-          rel="noopener noreferrer"
+        <p>
+          <strong>SLMs</strong> got good. <strong>Edge hardware</strong> got
+          cheap. The bottleneck stopped being technology and became
+          conviction.
+        </p>
+        <p>
+          The kids who need this most do not have wifi. The{" "}
+          <strong>university</strong> has to come to them, in their language,
+          on a device they can already afford. <strong>Offline first</strong>.{" "}
+          <strong>Small-language-model native</strong>. Built for Cotonou
+          before Cambridge.
+        </p>
+      </section>
 
+      <div className="manifesto__diagramBlock">
+        <p className="sr-only" id="edge-tutor-desc">
+          Flow diagram: the learner moves into an on-device, offline edge
+          tutor. Model under three billion parameters, hardware under
+          fifty dollars, small language model, tutoring in the learner’s
+          language. No Wi-Fi, no server, no permission needed.
+        </p>
+        <div
+          className="manifesto__diagramScreen"
+          aria-describedby="edge-tutor-desc"
         >
-          Visit My Personal Website
-        </Link>
-      </main>
-      
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center text-gray-500 dark:text-gray-400">
-        &copy; {new Date().getFullYear()} Akilli. All rights reserved.
-      </footer>
+          <EdgeTutorIllustration />
+        </div>
+        <pre className="manifesto__diagramPrint" aria-hidden="true">
+          {diagramPrint}
+        </pre>
+      </div>
+
+      <section className="manifesto__section" aria-labelledby="kicker-why">
+        <h2 id="kicker-why" className="manifesto__kicker">
+          Why me
+        </h2>
+        <p>
+          I am the kid this serves. I am also the{" "}
+          <strong>researcher</strong> who can build it. I have{" "}
+          <strong>shipped</strong> products that real people pay for. I do
+          not need permission to start.
+        </p>
+      </section>
+
+      <p className="manifesto__pullquote">
+        Don’t ask what the world needs. Ask what makes you come alive, and
+        go do it.
+      </p>
+
+      <p className="manifesto__close">
+        This is what makes me come alive. I will build it whether this
+        round is funded or not. <strong>Funding</strong> only changes the
+        clock: more ground covered, more kids, fewer delays.
+      </p>
+
+      <p className="manifesto__signoff">- Josué</p>
+
+      <p className="manifesto__contact">
+        <a href="mailto:josue.f.godeme.26@dartmouth.edu">
+          josue.f.godeme.26@dartmouth.edu
+        </a>
+      </p>
+    </article>
+    <div className="manifesto__floatingControls">
+      <ColorModeControl />
+      <ManifestoStyleToggle />
+    </div>
     </div>
   );
 }
-
-
-
-
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-//       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-//         <Image
-//           className="dark:invert"
-//           src="/next.svg"
-//           alt="Next.js logo"
-//           width={180}
-//           height={38}
-//           priority
-//         />
-//         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-//           <li className="mb-2">
-//             Get started by editing{" "}
-//             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-//               src/app/page.tsx
-//             </code>
-//             .
-//           </li>
-//           <li>Save and see your changes instantly.</li>
-//         </ol>
-
-//         <div className="flex gap-4 items-center flex-col sm:flex-row">
-//           <a
-//             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-//             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             <Image
-//               className="dark:invert"
-//               src="/vercel.svg"
-//               alt="Vercel logomark"
-//               width={20}
-//               height={20}
-//             />
-//             Deploy now
-//           </a>
-//           <a
-//             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-//             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             Read our docs
-//           </a>
-//         </div>
-//       </main>
-//       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-//         <a
-//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-//           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <Image
-//             aria-hidden
-//             src="/file.svg"
-//             alt="File icon"
-//             width={16}
-//             height={16}
-//           />
-//           Learn
-//         </a>
-//         <a
-//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-//           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <Image
-//             aria-hidden
-//             src="/window.svg"
-//             alt="Window icon"
-//             width={16}
-//             height={16}
-//           />
-//           Examples
-//         </a>
-//         <a
-//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-//           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <Image
-//             aria-hidden
-//             src="/globe.svg"
-//             alt="Globe icon"
-//             width={16}
-//             height={16}
-//           />
-//           Go to nextjs.org →
-//         </a>
-//       </footer>
-//     </div>
-//   );
-// }

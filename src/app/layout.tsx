@@ -1,23 +1,48 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+
 import "./globals.css";
 
-import { ThemeProvider } from "@/components/theme-provider";
-// import { ThemeToggle } from "@/components/theme-toggle";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Self-hosted via next/font (same families/weights as Google Fonts; no extra preconnect).
+const fontFraunces = Fraunces({
   subsets: ["latin"],
+  axes: ["SOFT", "WONK", "opsz"],
+  variable: "--font-fraunces",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fontInter = Inter({
   subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-inter",
+  display: "swap",
 });
+
+const fontMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
+const OPENING =
+  "The right goal is not one famous teacher broadcast to every zip code.";
+
+const faviconSvg = encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect width="16" height="16" fill="#000"/></svg>'
+);
 
 export const metadata: Metadata = {
-  title: "AKILLI",
-  description: "Using Tech to make Education and Healthcare more accessible in Africa.",
+  title: "AI-Native University - Josué Godeme",
+  description: OPENING,
+  openGraph: {
+    title: "AI-Native University - Josué Godeme",
+    description: OPENING,
+    type: "article",
+  },
+  icons: {
+    icon: `data:image/svg+xml,${faviconSvg}`,
+  },
 };
 
 export default function RootLayout({
@@ -26,16 +51,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-950 transition-colors`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+    <html lang="en">
+      <body
+        className={`${fontFraunces.variable} ${fontInter.variable} ${fontMono.variable} antialiased`}
+      >
+        {children}
       </body>
     </html>
   );
