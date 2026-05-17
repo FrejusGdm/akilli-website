@@ -154,18 +154,28 @@ body {
 
 .manifesto__kicker {
   font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin: 0 0 1.15rem;
+  margin: 0 0 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(10, 10, 10, 0.14);
   line-height: 1.4;
   color: #0a0a0a;
+}
+
+@media (min-width: 768px) {
+  .manifesto__kicker {
+    font-size: 12px;
+    margin-bottom: 2.25rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   .manifesto__kicker {
     color: #fafafa;
+    border-top-color: rgba(250, 250, 250, 0.14);
   }
 }
 
