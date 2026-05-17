@@ -2,20 +2,7 @@ import "./manifesto.css";
 
 import Image from "next/image";
 import { ColorModeControl } from "@/components/color-mode-control";
-import { EdgeTutorIllustration } from "@/components/edge-tutor-illustration";
 import { ManifestoStyleToggle } from "@/components/manifesto-style-toggle";
-
-const diagramPrint = `            THE KID · speaks, asks, learns
-                    │
-                    ▼
-            ┌── EDGE TUTOR ────────┐
-            │  on-device · offline │
-            ├ Model ─┬  Hardware ─┤
-            │<3B SLM│ <$50 device │
-            ├────── her language ──┤
-            │ no Wi-Fi · no server │
-            │  no permission needed│
-            └──────────────────────┘`;
 
 export default function Home() {
   return (
@@ -24,31 +11,25 @@ export default function Home() {
         letter
       </aside>
     <article className="manifesto">
-      <p className="manifesto__masthead">
-        <strong>AI-Native University</strong>
-      </p>
-
       <h1 className="manifesto__title">
-        {/* Education is the shortest path to leadership. */}
-        {/* The best teacher in the world should fit in every pocket. */}
-        A <strong>university</strong> that comes to you.
+        AI-Native
+        <br />
+        University
       </h1>
-      <div className="manifesto__rule" aria-hidden="true" />
 
       <p className="manifesto__dateline">
         Hanover, NH · April 2026 · Josué Godeme
       </p>
 
       <p className="manifesto__lead">
-        The right goal is not one famous teacher broadcast to every zip
-        code. It is education that fits each student: their pace, their
-        language, the time they can give. That is{" "}
-        <strong>personalized education</strong>, and for most of the world it
-        has been out of reach.{" "}
-        <strong>Small language models (SLMs)</strong> and{" "}
-        <strong>cheap devices</strong> are strong enough to change that. For
-        the first time, this kind of <strong>tutoring</strong> can sit in a
-        pocket. That is the bet.
+        Most online education assumes the student has a laptop, reliable
+        Wi-Fi, strong English, quiet hours, and the ability to adapt to the
+        system. Most students in the world do not live in that reality. I
+        am building for them — starting with an{" "}
+        <strong>offline, voice-first AI tutor</strong> that runs on a
+        low-cost device and works without Wi-Fi. The long-term vision is
+        an <strong>AI-native university</strong>: a school built around the
+        learner instead of the classroom.
       </p>
 
       <figure className="manifesto__hero">
@@ -66,15 +47,16 @@ export default function Home() {
 
       <section className="manifesto__section" aria-labelledby="kicker-from">
         <h2 id="kicker-from" className="manifesto__kicker">
-          Where I’m writing from
+          Where this comes from
         </h2>
         <p>
-          I came up in Benin, I study at Dartmouth, and I will go to
-          Tsinghua. I ranked first among about 80,000 students on my
-          country’s national exam. Every room I have walked into since
-          then has been paid for by a scholarship, which is another way to
-          say that it was paid for by the belief that education travels.{" "}
-          <strong>Education is the thread.</strong>
+          I grew up in Benin. I study at Dartmouth. I am going to Tsinghua
+          next. Education has carried me across countries, languages, and
+          institutions. I ranked first among about 80,000 students on my
+          country’s national exam, and every major room I have entered
+          since then has been opened by a scholarship. That shaped how I
+          see education.{" "}
+          <strong>Talent is everywhere. Access is not.</strong>
         </p>
       </section>
 
@@ -83,53 +65,57 @@ export default function Home() {
           What I’m building
         </h2>
         <p>
-          I am building an <strong>AI-native university</strong>. It is not
-          an app. It is not a course. It is not a platform dressed up in{" "}
-          <strong>university</strong> clothes. It is a re-architecting of what
-          school means when the best tutor in the world fits on a{" "}
-          <strong>device</strong> that costs less than a textbook.
+          I am starting with the tutor. The first prototype will be{" "}
+          <strong>in English</strong> — that is the fastest way to test the
+          tutoring experience, the voice interface, and the offline setup.
+          But English is not the destination. Once the core system works,
+          I will move into <strong>local languages</strong>, where the need
+          is greatest. A student should learn in the language she thinks
+          in, not the language the internet happens to support.
         </p>
         <p>
-          <strong>SLMs</strong> got good. <strong>Edge hardware</strong> got
-          cheap. The bottleneck stopped being technology and became
-          conviction.
+          The system works like this: a student speaks. The tutor listens.
+          It explains, asks questions, gives practice, and adapts. It runs{" "}
+          <strong>offline</strong> on cheap hardware. No Wi-Fi. No server.
+          No permanent English requirement.
         </p>
         <p>
-          The kids who need this most do not have wifi. The{" "}
-          <strong>university</strong> has to come to them, in their language,
-          on a device they can already afford. <strong>Offline first</strong>.{" "}
-          <strong>Small-language-model native</strong>. Built for Cotonou
-          before Cambridge.
+          The technical bet is that <strong>small language models</strong>{" "}
+          are now good enough, and <strong>edge devices</strong> are now
+          cheap enough, to make this possible. The human bet is that a
+          child should not have to translate herself before she can learn.
+        </p>
+        <p>
+          Built for <strong>Cotonou</strong> before{" "}
+          <strong>Cambridge</strong>.
         </p>
       </section>
 
-      <div className="manifesto__diagramBlock">
-        <p className="sr-only" id="edge-tutor-desc">
-          Flow diagram: the learner moves into an on-device, offline edge
-          tutor. Model under three billion parameters, hardware under
-          fifty dollars, small language model, tutoring in the learner’s
-          language. No Wi-Fi, no server, no permission needed.
+      <section className="manifesto__section" aria-labelledby="kicker-now">
+        <h2 id="kicker-now" className="manifesto__kicker">
+          Why now
+        </h2>
+        <p>
+          For years, personalized tutoring was too expensive to scale. AI
+          changes that — but most AI education tools are still built for
+          students who already have access: good devices, stable internet,
+          dominant languages. The goal is not to put a chatbot inside
+          school. It is to rethink what school can become when every
+          learner can have a patient tutor in their pocket.
         </p>
-        <div
-          className="manifesto__diagramScreen"
-          aria-describedby="edge-tutor-desc"
-        >
-          <EdgeTutorIllustration />
-        </div>
-        <pre className="manifesto__diagramPrint" aria-hidden="true">
-          {diagramPrint}
-        </pre>
-      </div>
+      </section>
 
       <section className="manifesto__section" aria-labelledby="kicker-why">
         <h2 id="kicker-why" className="manifesto__kicker">
           Why me
         </h2>
         <p>
-          I am the kid this serves. I am also the{" "}
-          <strong>researcher</strong> who can build it. I have{" "}
-          <strong>shipped</strong> products that real people pay for. I do
-          not need permission to start.
+          I am the kid this is meant to serve. I am also the{" "}
+          <strong>builder</strong> and <strong>researcher</strong> who can
+          start building it. I have worked on low-resource language AI,
+          shipped products real people use, and spent years thinking about
+          what education looks like when the default assumptions are
+          wrong. I do not need permission to begin.
         </p>
       </section>
 
@@ -139,9 +125,13 @@ export default function Home() {
       </p>
 
       <p className="manifesto__close">
-        This is what makes me come alive. I will build it whether this
-        round is funded or not. <strong>Funding</strong> only changes the
-        clock: more ground covered, more kids, fewer delays.
+        This is what makes me come alive. I do not know the final payment
+        model yet — it may involve governments, families, foundations,
+        schools, or some mix. But the first question is not who pays. It
+        is whether this can help a student learn. That is what I am
+        testing first. <strong>Funding</strong> only changes the clock:
+        more ground covered, more kids, fewer delays. I am building this
+        either way.
       </p>
 
       <p className="manifesto__signoff">- Josué</p>

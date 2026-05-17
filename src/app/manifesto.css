@@ -39,16 +39,23 @@ body {
   max-width: 640px;
   margin: 0 auto;
   padding: var(--m-gutter-y-top) var(--m-gutter-x) var(--m-gutter-y-bottom);
-  font-family: var(--font-fraunces), Charter, Georgia, serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   font-size: 17px;
-  line-height: 1.65;
+  line-height: 1.6;
   font-weight: 400;
+  color: #4a4a4a;
   -webkit-font-smoothing: antialiased;
 }
 
 @media (min-width: 768px) {
   .manifesto {
-    font-size: 19px;
+    font-size: 18px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .manifesto {
+    color: #b8b8b8;
   }
 }
 
@@ -69,18 +76,20 @@ body {
 }
 
 .manifesto__title {
-  font-family: var(--font-fraunces), Charter, Georgia, serif;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.2;
-  margin: 0 0 0.75rem;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin: 0 0 2.5rem;
   text-align: left;
   color: #0a0a0a;
 }
 
 @media (min-width: 768px) {
   .manifesto__title {
-    font-size: 3rem;
+    font-size: 5rem;
+    margin-bottom: 3.5rem;
   }
 }
 
@@ -400,17 +409,20 @@ body {
 }
 
 .manifesto__pullquote {
-  text-align: center;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  text-align: left;
   font-style: italic;
+  font-weight: 500;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
   margin: var(--m-section) 0;
   color: #0a0a0a;
 }
 
 @media (min-width: 768px) {
   .manifesto__pullquote {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -426,9 +438,11 @@ body {
 }
 
 .manifesto__signoff {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   text-align: right;
   font-style: italic;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 17px;
   margin: 0 0 0;
   color: #0a0a0a;
 }
@@ -595,31 +609,8 @@ html[data-manifesto-view="editorial"] .manifesto {
   padding: 0;
 }
 
-html[data-manifesto-view="editorial"] .manifesto__title {
-  color: #7a7a7a;
-  font-weight: 400;
-}
-
 html[data-manifesto-view="editorial"] .manifesto__masthead {
   margin-bottom: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  html[data-manifesto-view="editorial"] .manifesto__title {
-    font-size: 2.25rem;
-  }
-}
-
-@media (min-width: 768px) and (prefers-color-scheme: light) {
-  html[data-manifesto-view="editorial"] .manifesto__title {
-    font-size: 2.5rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html[data-manifesto-view="editorial"] .manifesto__title {
-    color: #a3a3a3;
-  }
 }
 
 /* Mobile: rail as top label in editorial */
@@ -837,10 +828,6 @@ html[data-color-mode="light"][data-manifesto-view="editorial"] body {
   background: #fafaf8;
 }
 
-html[data-color-mode="light"][data-manifesto-view="editorial"] .manifesto__title {
-  color: #7a7a7a;
-}
-
 html[data-color-mode="light"] .manifesto__styleToggle {
   color: #0a0a0a;
   background: rgba(255, 255, 255, 0.92);
@@ -895,10 +882,6 @@ html[data-color-mode="dark"] .manifesto__heroFrame {
 
 html[data-color-mode="dark"][data-manifesto-view="editorial"] body {
   background: #0a0a0a;
-}
-
-html[data-color-mode="dark"][data-manifesto-view="editorial"] .manifesto__title {
-  color: #a3a3a3;
 }
 
 html[data-color-mode="dark"] .manifesto__styleToggle {
