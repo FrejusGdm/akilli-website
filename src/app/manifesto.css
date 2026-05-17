@@ -1,19 +1,21 @@
 /* Editorial manifesto: light / dark (prefers-color-scheme) / print */
 :root {
-  --m-gutter-x: 1.25rem;
-  --m-gutter-y-top: 2.5rem;
+  --m-gutter-x: 1.5rem;
+  --m-gutter-y-top: 3.5rem;
   /* Extra bottom space so fixed theme/layout bar never covers last lines */
-  --m-gutter-y-bottom: 6.5rem;
-  --m-section: 2.75rem;
-  --m-block: 1.1rem;
+  --m-gutter-y-bottom: 7rem;
+  --m-section: 4.25rem;
+  --m-lead-gap: 5rem;
+  --m-block: 1.15rem;
 }
 
 @media (min-width: 768px) {
   :root {
-    --m-gutter-x: 1.5rem;
-    --m-gutter-y-top: 3rem;
-    --m-gutter-y-bottom: 7.5rem;
-    --m-section: 3.25rem;
+    --m-gutter-x: 2rem;
+    --m-gutter-y-top: 5rem;
+    --m-gutter-y-bottom: 8rem;
+    --m-section: 5.5rem;
+    --m-lead-gap: 6.5rem;
   }
 }
 
@@ -139,7 +141,7 @@ body {
 }
 
 .manifesto__lead {
-  margin-bottom: var(--m-section);
+  margin-bottom: var(--m-lead-gap);
 }
 
 .manifesto__section {
