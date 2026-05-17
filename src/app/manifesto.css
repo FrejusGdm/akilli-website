@@ -1,19 +1,21 @@
 /* Editorial manifesto: light / dark (prefers-color-scheme) / print */
 :root {
-  --m-gutter-x: 1.25rem;
-  --m-gutter-y-top: 2.5rem;
+  --m-gutter-x: 1.5rem;
+  --m-gutter-y-top: 3.5rem;
   /* Extra bottom space so fixed theme/layout bar never covers last lines */
-  --m-gutter-y-bottom: 6.5rem;
-  --m-section: 2.75rem;
-  --m-block: 1.1rem;
+  --m-gutter-y-bottom: 7rem;
+  --m-section: 4.25rem;
+  --m-lead-gap: 5rem;
+  --m-block: 1.15rem;
 }
 
 @media (min-width: 768px) {
   :root {
-    --m-gutter-x: 1.5rem;
-    --m-gutter-y-top: 3rem;
-    --m-gutter-y-bottom: 7.5rem;
-    --m-section: 3.25rem;
+    --m-gutter-x: 2rem;
+    --m-gutter-y-top: 5rem;
+    --m-gutter-y-bottom: 8rem;
+    --m-section: 5.5rem;
+    --m-lead-gap: 6.5rem;
   }
 }
 
@@ -23,13 +25,13 @@ html {
 
 body {
   margin: 0;
-  background: #ffffff;
+  background: #f1efe9;
   color: #0a0a0a;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #0a0a0a;
+    background: #111110;
     color: #fafafa;
   }
 }
@@ -116,15 +118,19 @@ body {
 }
 
 .manifesto__dateline {
-  font-size: 14px;
-  font-style: italic;
-  color: #666;
-  margin: 0 0 1.85rem;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a8678;
+  margin: 0 0 2.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
   .manifesto__dateline {
-    color: #999;
+    color: #7a7768;
   }
 }
 
@@ -139,7 +145,7 @@ body {
 }
 
 .manifesto__lead {
-  margin-bottom: var(--m-section);
+  margin-bottom: var(--m-lead-gap);
 }
 
 .manifesto__section {
@@ -152,13 +158,20 @@ body {
 
 .manifesto__kicker {
   font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin: 0 0 1.15rem;
+  margin: 0 0 1.75rem;
   line-height: 1.4;
   color: #0a0a0a;
+}
+
+@media (min-width: 768px) {
+  .manifesto__kicker {
+    font-size: 12px;
+    margin-bottom: 2.25rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -413,16 +426,16 @@ body {
   text-align: left;
   font-style: italic;
   font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.4;
-  letter-spacing: -0.01em;
+  font-size: 1.375rem;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
   margin: var(--m-section) 0;
   color: #0a0a0a;
 }
 
 @media (min-width: 768px) {
   .manifesto__pullquote {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -448,7 +461,7 @@ body {
 }
 
 .manifesto p.manifesto__signoff {
-  margin-top: 2.25rem;
+  margin-top: 3rem;
   margin-bottom: 0;
 }
 
@@ -459,20 +472,23 @@ body {
 }
 
 .manifesto__contact {
-  text-align: center;
-  font-size: 14px;
-  color: #666;
+  text-align: left;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #6a6658;
   padding-bottom: 0.25rem;
 }
 
 .manifesto p.manifesto__contact {
-  margin-top: 3.5rem;
+  margin-top: 4.5rem;
   margin-bottom: 0;
 }
 
 @media (prefers-color-scheme: dark) {
   .manifesto__contact {
-    color: #999;
+    color: #8a8676;
   }
 }
 
@@ -567,7 +583,7 @@ html[data-manifesto-view="editorial"] .manifesto__hero {
 
 /* Editorial: soft page field like a studio proof */
 html[data-manifesto-view="editorial"] body {
-  background: #fafaf8;
+  background: #f1efe9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -786,7 +802,7 @@ html[data-manifesto-view="editorial"] .manifesto__masthead {
 
 /* User override: always light (overrides OS dark) */
 html[data-color-mode="light"] body {
-  background: #ffffff;
+  background: #f1efe9;
   color: #0a0a0a;
 }
 
@@ -825,7 +841,7 @@ html[data-color-mode="light"] .manifesto__heroFrame {
 }
 
 html[data-color-mode="light"][data-manifesto-view="editorial"] body {
-  background: #fafaf8;
+  background: #f1efe9;
 }
 
 html[data-color-mode="light"] .manifesto__styleToggle {
@@ -842,7 +858,7 @@ html[data-color-mode="light"] .manifesto__styleToggle:hover {
 
 /* User override: always dark (overrides OS light) */
 html[data-color-mode="dark"] body {
-  background: #0a0a0a;
+  background: #111110;
   color: #fafafa;
 }
 
@@ -881,7 +897,7 @@ html[data-color-mode="dark"] .manifesto__heroFrame {
 }
 
 html[data-color-mode="dark"][data-manifesto-view="editorial"] body {
-  background: #0a0a0a;
+  background: #111110;
 }
 
 html[data-color-mode="dark"] .manifesto__styleToggle {

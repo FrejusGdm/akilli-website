@@ -85,10 +85,6 @@ export default function Home() {
           cheap enough, to make this possible. The human bet is that a
           child should not have to translate herself before she can learn.
         </p>
-        <p>
-          Built for <strong>Cotonou</strong> before{" "}
-          <strong>Cambridge</strong>.
-        </p>
       </section>
 
       <section className="manifesto__section" aria-labelledby="kicker-now">
