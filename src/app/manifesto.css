@@ -23,13 +23,13 @@ html {
 
 body {
   margin: 0;
-  background: #ffffff;
+  background: #f1efe9;
   color: #0a0a0a;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #0a0a0a;
+    background: #111110;
     color: #fafafa;
   }
 }
@@ -567,7 +567,7 @@ html[data-manifesto-view="editorial"] .manifesto__hero {
 
 /* Editorial: soft page field like a studio proof */
 html[data-manifesto-view="editorial"] body {
-  background: #fafaf8;
+  background: #f1efe9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -786,7 +786,7 @@ html[data-manifesto-view="editorial"] .manifesto__masthead {
 
 /* User override: always light (overrides OS dark) */
 html[data-color-mode="light"] body {
-  background: #ffffff;
+  background: #f1efe9;
   color: #0a0a0a;
 }
 
@@ -825,7 +825,7 @@ html[data-color-mode="light"] .manifesto__heroFrame {
 }
 
 html[data-color-mode="light"][data-manifesto-view="editorial"] body {
-  background: #fafaf8;
+  background: #f1efe9;
 }
 
 html[data-color-mode="light"] .manifesto__styleToggle {
@@ -842,7 +842,7 @@ html[data-color-mode="light"] .manifesto__styleToggle:hover {
 
 /* User override: always dark (overrides OS light) */
 html[data-color-mode="dark"] body {
-  background: #0a0a0a;
+  background: #111110;
   color: #fafafa;
 }
 
@@ -881,7 +881,7 @@ html[data-color-mode="dark"] .manifesto__heroFrame {
 }
 
 html[data-color-mode="dark"][data-manifesto-view="editorial"] body {
-  background: #0a0a0a;
+  background: #111110;
 }
 
 html[data-color-mode="dark"] .manifesto__styleToggle {
