@@ -27,7 +27,7 @@ const fontMono = JetBrains_Mono({
 });
 
 const OPENING =
-  "The right goal is not one famous teacher broadcast to every zip code.";
+  "A manifesto for an AI-native school built for places where school still does not reach.";
 
 const faviconSvg = encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect width="16" height="16" fill="#000"/></svg>'
